@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import Header from "./components/Header";
+import Container from "./components/Container"
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Container>
+
+      </Container>
     </div>
   );
-}
+};
+
+
+// function App() {
+//   const [state, setState] = useState(null)
+
+//   // useEffect(() => {
+//   //   async function getData () {
+//   //     const url = "https://randomuser.me/api/?results=250&nat=us";
+
+//   //     const users = await fetch(url).then(response => {
+//   //       return response
+//   //     });
+
+//   //     setState(users)
+//   //     console.log(users)
+//   //   }
+//   //   getData()m
+//   // }, []);
+
+//   useEffect(() => {
+//     API.getUsers().then((results) => {
+//       setState(results.data.results);
+//       //console.log(results.data.results);
+//     });
+//   }, []);
+
+//   console.log(state);
+//   return (
+//     <div className="App">
+//       <h1>Employees</h1>
+//       <ul>
+//         {state.map((user) => (
+//           <li>{`${user.name.first} ${user.name.last}`}</li>
+//         ))}
+
+//       </ul>
+//     </div>
+//   );
+// }
 
 export default App;
